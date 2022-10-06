@@ -26,10 +26,18 @@ li {
 
 /* All css custom property */
 :root {
+  /* Colors */
   --first-color: #40bfff;
   --second-color: #ff4858;
   --third-color: #bcddfe;
   --fourth-color: #373737;
+  --fifth-color: #ff657e;
+  --seventh-color: white;
+
+  /* Font size */
+  --xs-font: 1.2rem;
+  --normal-font: 1.6rem;
+  --md-font: 1.8rem;
 }
 
 html {
@@ -45,4 +53,9 @@ body {
 .container {
   max-width: 130rem;
   margin: 0 auto;
+}
+
+/* Paddings */
+.ps {
+  padding-inline-start: 0.5rem;
 }

@@ -1,11 +1,18 @@
+import logo from "assets/icons/logo/logo.svg";
 import { useState } from "react";
 import styled from "styled-components";
 
 // Styling
-const NavbarWrap = styled.ul`
+const NavbarWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const NavbarItems = styled.ul`
   display: flex;
   gap: 4rem;
-  font-size: 2.4rem;
+  font-size: var(--md-font);
 `;
 
 const NavbarItem = styled.li`
@@ -21,9 +28,10 @@ function Navbar() {
   ));
 
   return (
-    <>
-      <NavbarWrap>{navbarItem}</NavbarWrap>
-    </>
+    <NavbarWrap>
+      <img src={logo} alt="logo" />
+      <NavbarItems>{navbarItem}</NavbarItems>
+    </NavbarWrap>
   );
 }
 
