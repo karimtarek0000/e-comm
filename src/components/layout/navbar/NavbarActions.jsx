@@ -15,8 +15,8 @@ const CountItem = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -18px;
-  left: 7px;
+  top: -13px;
+  left: 13px;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
