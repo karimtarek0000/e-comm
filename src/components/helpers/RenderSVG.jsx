@@ -4,7 +4,9 @@ function RenderSVG({ name, size }) {
   return (
     <>
       <svg width={size} height={size}>
-        <use xlinkHref={`${sprite}#${name}`}></use>
+        <use xlinkHref={`${sprite}#${name}`}>
+          <title>{name}</title>
+        </use>
       </svg>
     </>
   );
