@@ -10,7 +10,7 @@ const NavbarActionsWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0;
-  gap: ${({ gap }) => (gap ? gap : "1rem")};
+  gap: ${({ gap }) => (gap ? gap : "0")};
 `;
 
 const CountItem = styled.span`
@@ -100,9 +100,15 @@ function NavbarActions() {
           <Link to="/auth">
             <RenderSVG size="2.5rem" name="user" />
           </Link>
+
+          {/* Change language */}
+          <NavbarActionsWrap>
+            <p>En</p>
+          </NavbarActionsWrap>
         </NavbarActionsWrap>
       </NavbarActionsWrap>
 
+      {/* For routing */}
       <Outlet />
     </>
   );
