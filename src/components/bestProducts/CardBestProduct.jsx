@@ -1,5 +1,7 @@
-import logo from "assets/img/header/1.webp";
+import image from "assets/img/header/1.webp";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import CardActions from "./CardActions";
 
 // Style
 const CardWrapp = styled.div`
@@ -11,6 +13,7 @@ const CardWrapp = styled.div`
   background-color: var(--third-color);
   overflow: hidden;
   max-height: 40rem;
+  cursor: pointer;
 `;
 
 const H5 = styled.h5`
@@ -18,7 +21,7 @@ const H5 = styled.h5`
   margin-bottom: 0.5rem;
 `;
 
-const PriceWrapp = styled.p`
+const PriceWrapp = styled.div`
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -50,23 +53,28 @@ const ImageWrapp = styled.div`
 `;
 
 function CardBestProduct(props) {
-  const { name, dis, prec } = props;
+  const { name, price, dis, prec } = props;
+  const navigate = useNavigate();
 
   return (
-    <CardWrapp>
+    <CardWrapp onClick={() => navigate(`/product/${name}`)}>
       <H5 className="truncut">{name}</H5>
 
+      {/* Discount */}
       <PriceWrapp>
         <Discount dis>${dis}</Discount>
         <Discount>{prec}% Off</Discount>
       </PriceWrapp>
 
+      {/* Image */}
       <ImageWrapp>
-        <img className="res-img" src={logo} alt="logo" />
+        <img className="res-img" src={image} alt="img" />
       </ImageWrapp>
 
+      {/* Actions and price */}
       <PriceWrapp>
-        <Price>$575</Price>
+        <CardActions />
+        <Price>${price}</Price>
       </PriceWrapp>
     </CardWrapp>
   );
