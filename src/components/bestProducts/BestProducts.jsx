@@ -7,6 +7,7 @@ import CardBestProduct from "./CardBestProduct";
 const Section = styled.section`
   position: relative;
   margin-top: -20rem;
+  margin-bottom: 5rem;
 `;
 
 function BestProducts() {
