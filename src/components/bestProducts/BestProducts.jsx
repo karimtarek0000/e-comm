@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ResponsiveCols } from "style";
+import { Row } from "style";
 import styled from "styled-components";
 import CardBestProduct from "./CardBestProduct";
 
@@ -47,7 +47,7 @@ function BestProducts() {
 
   return (
     <Section className="container">
-      <ResponsiveCols col="3">{ListCardBestProduct}</ResponsiveCols>
+      <Row cols="3">{ListCardBestProduct}</Row>
     </Section>
   );
 }

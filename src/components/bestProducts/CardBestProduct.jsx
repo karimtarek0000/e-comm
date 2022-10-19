@@ -1,5 +1,6 @@
 import image from "assets/img/header/1.webp";
 import { useNavigate } from "react-router-dom";
+import { Discount, Price, PriceWrapp } from "style";
 import styled from "styled-components";
 import CardActions from "./CardActions";
 
@@ -19,31 +20,6 @@ const CardWrapp = styled.div`
 const H5 = styled.h5`
   font-size: 2rem;
   margin-bottom: 0.5rem;
-`;
-
-const PriceWrapp = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-`;
-
-const Discount = styled.span`
-  font-size: 1.5rem;
-  ${(props) =>
-    props.dis
-      ? {
-          color: "var(--eighth-color)",
-          textDecoration: "line-through",
-          fontWeight: 200,
-        }
-      : { color: "var(--second-color)" }}
-`;
-
-const Price = styled(Discount)`
-  color: var(--fourth-color);
-  display: block;
-  margin-left: auto;
-  font-size: 3rem;
 `;
 
 const ImageWrapp = styled.div`

@@ -16,7 +16,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 a,
 span,
 img,
@@ -41,6 +40,7 @@ li {
   --xs-font: 1.2rem;
   --normal-font: 1.6rem;
   --md-font: 1.8rem;
+  --md-x-font: 3rem;
 }
 
 html {
