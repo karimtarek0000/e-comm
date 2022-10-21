@@ -68,6 +68,7 @@ const UserProfile = styled.div`
 function NavbarActions() {
   const [toggle, setToggle] = useState(false);
 
+  // Handlers
   const toggleProfile = () => setToggle(!toggle);
 
   return (
