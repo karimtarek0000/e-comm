@@ -56,6 +56,7 @@ const Paragraph = styled.p`
 const PriceWrapp = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.7rem;
 `;
 
@@ -71,11 +72,17 @@ const Discount = styled.span`
       : { color: "var(--second-color)" }}
 `;
 
+const DiscountWrapp = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
 const Price = styled(Discount)`
   color: var(--fourth-color);
   display: block;
-  margin-left: auto;
+  /* margin-left: auto; */
   font-size: var(--md-x-font);
 `;
 
-export { Row, Discount, Price, PriceWrapp, Paragraph };
+export { Row, DiscountWrapp, Discount, Price, PriceWrapp, Paragraph };

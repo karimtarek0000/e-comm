@@ -1,7 +1,9 @@
 import logo from "assets/icons/logo/logo.svg";
 import RenderSVG from "components/helpers/RenderSVG";
+import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
+import ProfileList from "../header/ProfileList";
 
 // Styling
 const NavbarActionsWrap = styled.div`
@@ -19,7 +21,7 @@ const CountItem = styled.span`
   justify-content: center;
   align-items: center;
   top: -18px;
-  left: 20px;
+  inset-inline-start: 20px;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -58,7 +60,16 @@ const Input = styled.input`
   }
 `;
 
+const UserProfile = styled.div`
+  position: relative;
+  cursor: pointer;
+`;
+
 function NavbarActions() {
+  const [toggle, setToggle] = useState(false);
+
+  const toggleProfile = () => setToggle(!toggle);
+
   return (
     <>
       <NavbarActionsWrap className="container">
@@ -97,9 +108,10 @@ function NavbarActions() {
           </Link>
 
           {/* User */}
-          <Link to="/auth">
+          <UserProfile onClick={toggleProfile}>
             <RenderSVG size="2.5rem" name="user" />
-          </Link>
+            <ProfileList toggle={toggle} />
+          </UserProfile>
 
           {/* Change language */}
           <NavbarActionsWrap>
