@@ -12,3 +12,6 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+const name = "karim";
+console.log(name);
