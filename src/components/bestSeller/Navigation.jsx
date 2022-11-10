@@ -6,7 +6,7 @@ const NavWrapp = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
 `;
 
 const NavItem = styled.li`
@@ -25,7 +25,7 @@ const NavItem = styled.li`
       position: absolute;
       border: 1px solid var(--first-color);
       bottom: 0;
-      left: 0;
+      inset-inline-start: 0;
       right: 0;
     }
   }

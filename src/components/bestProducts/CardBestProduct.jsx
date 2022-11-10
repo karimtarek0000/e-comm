@@ -1,6 +1,6 @@
 import image from "assets/img/header/1.webp";
 import { useNavigate } from "react-router-dom";
-import { Discount, Price, PriceWrapp } from "style";
+import { Discount, DiscountWrapp, Price, PriceWrapp } from "style";
 import styled from "styled-components";
 import CardActions from "./CardActions";
 
@@ -37,10 +37,10 @@ function CardBestProduct(props) {
       <H5 className="truncut">{name}</H5>
 
       {/* Discount */}
-      <PriceWrapp>
+      <DiscountWrapp>
         <Discount dis>${dis}</Discount>
         <Discount>{prec}% Off</Discount>
-      </PriceWrapp>
+      </DiscountWrapp>
 
       {/* Image */}
       <ImageWrapp>

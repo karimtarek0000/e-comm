@@ -1,15 +1,22 @@
 import image from "assets/img/header/1.webp";
-// import CardActions from "components/bestProducts/CardActions";
-import { Discount, Paragraph, Price, PriceWrapp, Row } from "style";
+import CardActions from "components/bestProducts/CardActions";
+import {
+  Discount,
+  DiscountWrapp,
+  Paragraph,
+  Price,
+  PriceWrapp,
+  Row,
+} from "style";
 import styled from "styled-components";
 
 // Style
 const CardWrapp = styled(Row)`
+  position: relative;
   flex-flow: column nowrap;
   border-radius: 5px;
-  overflow: hidden;
+  padding-block-end: 3rem;
   border: 1px solid var(--third-color);
-  padding-block-end: 1rem;
 `;
 
 const ImageWrapp = styled(Row)`
@@ -24,6 +31,18 @@ const CardInfoWrapp = styled.div`
 
 const ProductDisc = styled(Paragraph)`
   margin-block-end: 1rem;
+`;
+
+const Badge = styled.span`
+  position: absolute;
+  top: -1.5rem;
+  inset-inline-start: -1px;
+  padding: 1rem 2rem;
+  background-color: var(--second-color);
+  color: var(--seventh-color);
+  text-transform: capitalize;
+  font-size: var(--xs-font);
+  border-radius: 5px;
 `;
 
 function BestSellerCard() {
@@ -44,11 +63,20 @@ function BestSellerCard() {
 
         {/* Price and discount */}
         <PriceWrapp>
-          <Discount dis>$554</Discount>
-          <Discount>24% Off</Discount>
           <Price>$500</Price>
+
+          <DiscountWrapp>
+            <Discount dis>$554</Discount>
+            <Discount>24% Off</Discount>
+          </DiscountWrapp>
         </PriceWrapp>
       </CardInfoWrapp>
+
+      {/* Actions */}
+      <CardActions />
+
+      {/* Badge */}
+      <Badge>hot</Badge>
     </CardWrapp>
   );
 }
