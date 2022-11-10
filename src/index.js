@@ -13,6 +13,4 @@ root.render(
   </React.StrictMode>
 );
 
-let name = "karim";
-
-console.log("Name: ", name);
+const s = "karim";
